@@ -40,7 +40,7 @@ echo "==> Extracting 123UNIX2.IMG cpio archive"
 echo "==> Extracting 123UNIX3.IMG cpio archive"
 "${CPIO}" -idv < "${IMG}/123UNIX3.IMG"
 echo "==> Seeking into 123UNIX4.IMG to extract cpio archive"
-dd if="${IMG}/123UNIX4.IMG" skip=550536 bs=1 | "${CPIO}" -idv
+dd if="${IMG}/123UNIX4.IMG" skip=1 bs=550536 | "${CPIO}" -idv
 echo "==> Extracting 123UNIX5.IMG cpio archive"
 "${CPIO}" -idv < "${IMG}/123UNIX5.IMG"
 cd - > /dev/null
